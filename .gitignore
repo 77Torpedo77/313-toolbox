@@ -1,0 +1,106 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+wheelhouse/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+.python-version
+venv.bak/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PyInstaller
+*.manifest
+*.spec
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets / environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# Dataset and large data files
+data/
+datasets/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.zip
+*.tar.gz
+*.tgz
+*.ckpt
+*.pth
+*.pt
+*.onnx
+
+# Model training outputs / checkpoints / runs
+checkpoints/
+runs/
+wandb/
+mlruns/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backup files
+*~
+*.bak
+
+# Node
+node_modules/
+
+# JupyterLab workspace
+.jupyter/
+
+# Misc
+*.pyc
+*.pyo
+*.pyd
