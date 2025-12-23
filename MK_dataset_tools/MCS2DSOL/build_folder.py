@@ -63,8 +63,8 @@ def main():
 		print(f"{root_path} 不是有效的文件夹路径")
 		return
 
-	print("删除所有.pfm文件...")
-	delete_pfm_files(root_path)
+	# print("删除所有.pfm文件...")
+	# delete_pfm_files(root_path)
 
 	print("查找数字命名的子文件夹...")
 	numeric_folders = get_numeric_folders(root_path)
@@ -83,8 +83,8 @@ def build_folder_function(path):
 		print(f"{root_path} 不是有效的文件夹路径")
 		return
 
-	print("删除所有.pfm文件...")
-	delete_pfm_files(root_path)
+	# print("删除所有.pfm文件...")
+	# delete_pfm_files(root_path)
 
 	print("查找数字命名的子文件夹...")
 	numeric_folders = get_numeric_folders(root_path)

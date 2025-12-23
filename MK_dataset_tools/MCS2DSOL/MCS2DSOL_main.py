@@ -1,12 +1,15 @@
-import build_folder, dataset_rename, EvaluationForMCSSim, time2index
+import build_folder, dataset_rename, EvaluationForMCSSim, GTtime2index
+import os
 
-path = "/home/ps/work_space/DSOL-realsense/qqm_new_forest"
+path = r"D:\qwer\rgb"
 #fx fy cx cy baseline
 intrinsics = "640 640 319.5 239.5 0.07"
 
 build_folder.build_folder_function(path)
 dataset_rename.dataset_rename_function(path, intrinsics)
-EvaluationForMCSSim.EvaluationForMCSSim_function(path)
+
+parent_path = os.path.abspath(os.path.join(path, os.pardir))
+EvaluationForMCSSim.EvaluationForMCSSim_function(parent_path)
 
 
 # base_path = "/home/ps/work_space/DSOL-realsense"
