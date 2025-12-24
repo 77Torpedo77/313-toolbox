@@ -42,7 +42,7 @@ def write_timestamps(out_path: Path, count: int) -> None:
 	out_path.parent.mkdir(parents=True, exist_ok=True)
 	# 使用 newline='\n' 强制 Unix 风格换行，避免在 Windows 上被转换为 CRLF
 	with out_path.open("w", encoding="utf-8", newline="\n") as f:
-		for i in range(0, count):
+		for i in range(1, count + 1):
 			f.write(f"{i}\n")
 
 
