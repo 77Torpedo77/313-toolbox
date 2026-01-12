@@ -1,0 +1,26 @@
+# Multi-Folder Image Player 配置文件
+# 每行一个文件夹或轨迹文件路径，以 # 开头的行为注释
+# 脚本会自动识别：目录 -> 图片文件夹, .txt文件 -> 轨迹文件
+
+# ===== Bucket 数据 =====
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\bucket_png_data0
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\bucket_png_data1
+
+# ===== Disparity 数据 =====
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\disparity_png_data0
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\disparity_png_data1
+
+# ===== DSO Frame Info 数据 =====
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\dso_frame_info_data0
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\dso_frame_info_data1
+
+# ===== Match Depth 数据 =====
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_depth_png_data0
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_depth_png_data1
+
+# ===== Match 数据 =====
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_png_data0
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_png_data1
+
+# ===== 轨迹文件 =====
+Y:\PYL\work_space\dsol_ws\src\dsol-main\save\U_L100R50_V10_forest_pyl_dsol_data0_onnx_unknown_gpu_nofusion.txt

@@ -1,0 +1,33 @@
+# Multi-Folder Image Player 配置文件
+# 使用 YAML 格式，键值对组织
+
+# 图片文件夹列表
+folders:
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\bucket_png_data0
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\bucket_png_data1
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\disparity_png_data0
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\disparity_png_data1
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\dso_frame_info_data0
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\dso_frame_info_data1
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_depth_png_data0
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_depth_png_data1
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_png_data0
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\match_png_data1
+
+# 轨迹文件列表（估计值，用于可视化和计算相对运动）
+# 第一条轨迹会用于显示 Est 相对运动
+trajectories:
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\uptown,h30,v10,U_pyl_dsol_data0_onnx_unknown_gpu_nofusion.txt
+  - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\uptown,h30,v10,U_pyl_dsol_data1_onnx_unknown_gpu_nofusion.txt
+  # 在这里添加更多轨迹文件：
+  # - Y:\PYL\work_space\dsol_ws\src\dsol-main\save\另一条轨迹.txt
+
+# 真值文件（用于对比相对运动）
+ground_truth: Y:\PYL\work_space\dsol_ws\src\dsol-main\save\GT_uptown,h30,v10,U.txt
+
+# 真值帧偏移量 (用于对齐 Est 和 GT 的帧编号)
+# 来源：遗留问题 - Est轨迹从帧0开始，GT从帧1开始，但它们是一一对应的
+# 对应关系：Est帧N 对应 GT帧N+1
+# 使用：GT_frame = display_frame + offset
+# 例如：显示帧1时，Est计算帧0→1的运动，GT应计算帧1→2的运动，所以 offset=+1
+ground_truth_frame_offset: 1
