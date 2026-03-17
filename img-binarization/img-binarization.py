@@ -1,7 +1,8 @@
 import cv2
-import numpy as np
-import argparse
 import os
+
+
+SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
 
 def binarize_image(input_path, output_path):
     """
@@ -38,16 +39,31 @@ def binarize_image(input_path, output_path):
     print(f"二值化完成，结果已保存至: {output_path}")
 
 def main():
-    # --- 请在此处修改图片路径 ---
-    input_path = r"D:\tools\313-toolbox\img-binarization\input.png"
-    output_path = r"D:\tools\313-toolbox\img-binarization\output.png"
-    # --------------------------
+    input_dir = r"D:\tools\313-toolbox\img-binarization\input"
+    output_dir = r"D:\tools\313-toolbox\img-binarization\output"
 
-    if not os.path.exists(input_path):
-        print(f"错误: 输入文件 {input_path} 不存在，请检查路径。")
+    if not os.path.isdir(input_dir):
+        print(f"错误: 输入文件夹 {input_dir} 不存在，请创建后再运行。")
         return
 
-    binarize_image(input_path, output_path)
+    os.makedirs(output_dir, exist_ok=True)
+
+    image_files = [
+        f for f in os.listdir(input_dir)
+        if os.path.isfile(os.path.join(input_dir, f))
+        and os.path.splitext(f)[1].lower() in SUPPORTED_EXTENSIONS
+    ]
+
+    if not image_files:
+        print(f"提示: 输入文件夹 {input_dir} 中没有可处理的图片。")
+        return
+
+    for image_name in image_files:
+        input_path = os.path.join(input_dir, image_name)
+        output_path = os.path.join(output_dir, image_name)
+        binarize_image(input_path, output_path)
+
+    print(f"批量处理完成，共处理 {len(image_files)} 张图片。")
 
 if __name__ == "__main__":
     main()
